@@ -104,7 +104,7 @@ if __name__ == '__main__':
 		h5_file_path = os.path.join(args.data_h5_dir, 'patches', bag_name)
 		print('h5 path',h5_file_path)
 		
-		slide_file_path = os.path.join(r'/kaggle/input/camelyon-tumor2', slide_id+args.slide_ext)
+		slide_file_path = os.path.join(args.data_slide_dir, slide_id+args.slide_ext)
 		print('Slide path',slide_file_path)
 		print('\nprogress: {}/{}'.format(bag_candidate_idx, total))
 		print(slide_id)
