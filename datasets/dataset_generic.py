@@ -31,7 +31,7 @@ def save_splits(split_datasets, column_keys, filename, boolean_style=False):
 
 class Generic_WSI_Classification_Dataset(Dataset):
 	def __init__(self,
-		csv_path = 'dataset_csv/ccrcc_clean.csv',
+		csv_path = 'dataset_csv/camelyon16.csv',
 		shuffle = False, 
 		seed = 7, 
 		print_info = True,
