@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torch.autograd as ag
 
-from topk.polynomial.divide_conquer import divide_and_conquer
-from topk.polynomial.multiplication import Multiplication
-from topk.polynomial.grad import d_logS_d_expX
+from utils.topk.polynomial.divide_conquer import divide_and_conquer
+from utils.topk.polynomial.multiplication import Multiplication
+from utils.topk.polynomial.grad import d_logS_d_expX
 
 
 class LogSumExp(nn.Module):
