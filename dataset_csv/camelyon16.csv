@@ -4,7 +4,7 @@ patient_130,tumor_044,1
 patient_139,tumor_045,1
 patient_132,tumor_046,1
 patient_133,tumor_047,1
-patient_134,tumor_048,1
-patient_135,tumor_049,1
-patient_136,tumor_050,1
-patient_137,tumor_051,1
+patient_134,tumor_048,0
+patient_135,tumor_049,0
+patient_136,tumor_050,0
+patient_137,tumor_051,0
