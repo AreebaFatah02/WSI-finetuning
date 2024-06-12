@@ -1,9 +1,9 @@
 import torch
 import torch.autograd as ag
 
-from topk.polynomial.sp import log_sum_exp, LogSumExp
-from topk.logarithm import LogTensor
-from topk.utils import delta, split
+from utils.topk.polynomial.sp import log_sum_exp, LogSumExp
+from utils.topk.logarithm import LogTensor
+from utils.topk.utils import delta, split
 
 
 def Top1_Hard_SVM(labels, alpha=1.):
