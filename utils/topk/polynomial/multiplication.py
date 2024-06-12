@@ -3,7 +3,7 @@ import itertools
 
 from future.builtins import range
 from functools import reduce
-from topk.logarithm import LogTensor
+from utils.topk.logarithm import LogTensor
 
 
 def Multiplication(k):
