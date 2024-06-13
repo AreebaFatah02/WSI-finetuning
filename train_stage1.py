@@ -22,6 +22,7 @@ import numpy as np
 
 
 def main(args):
+    print("training ki pehli line')
     # create results directory if necessary
     if not os.path.isdir(args.results_dir):
         os.mkdir(args.results_dir)
@@ -42,11 +43,12 @@ def main(args):
     folds = np.arange(start, end)
     print('folds:',folds)
     for i in folds:
+        print('loop ka agaaz')
         seed_torch(args.seed+i)
         # pdb.set_trace()
         train_dataset, val_dataset, test_dataset = dataset.return_splits(from_id=False,
                 csv_path='{}/splits_{}.csv'.format(args.split_dir, i))
-        # train_loader = get_split_loader(train_dataset)
+        train_loader = get_split_loader(train_dataset)
         datasets = (train_dataset, val_dataset, test_dataset)
         results, test_auc, val_auc, test_acc, val_acc  = train(datasets, i, args)
         all_test_auc.append(test_auc)
@@ -121,8 +123,8 @@ args.weighted_sample =True
 args.inst_loss ="svm"
 args.task = "task_1_tumor_vs_normal"
 args.split_dir = "task_camelyon16/"
-args.csv_path = '/dataset_csv/camelyon16.csv'
-args.data_root_dir = "/data_feat"
+args.csv_path = 'dataset_csv/camelyon16.csv'
+args.data_root_dir = "data_feat"
 sub_feat_dir = 'Camelyon16_patch256_res50'
 args.max_epochs = 50
 args.reg = 1e-04
