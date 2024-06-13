@@ -22,7 +22,7 @@ import numpy as np
 
 
 def main(args):
-    print("training ki pehli line')
+    print('training ki pehli line')
     # create results directory if necessary
     if not os.path.isdir(args.results_dir):
         os.mkdir(args.results_dir)
