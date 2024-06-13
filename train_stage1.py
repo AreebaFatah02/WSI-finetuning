@@ -22,7 +22,6 @@ import numpy as np
 
 
 def main(args):
-    print('training ki pehli line')
     # create results directory if necessary
     if not os.path.isdir(args.results_dir):
         os.mkdir(args.results_dir)
@@ -43,17 +42,12 @@ def main(args):
     folds = np.arange(start, end)
     print('folds:',folds)
     for i in folds:
-        print('loop ka agaaz\n')
         seed_torch(args.seed+i)
         # pdb.set_trace()
-        print('loading data')
         train_dataset, val_dataset, test_dataset = dataset.return_splits(from_id=False,
                 csv_path='{}/splits_{}.csv'.format(args.split_dir, i))
-        print('loading loader')
-        train_loader = get_split_loader(train_dataset)
-        print('dsets')
+        # train_loader = get_split_loader(train_dataset)
         datasets = (train_dataset, val_dataset, test_dataset)
-        print('results')
         results, test_auc, val_auc, test_acc, val_acc  = train(datasets, i, args)
         all_test_auc.append(test_auc)
         all_val_auc.append(val_auc)
@@ -126,9 +120,9 @@ args.lr = 1e-4
 args.weighted_sample =True
 args.inst_loss ="svm"
 args.task = "task_1_tumor_vs_normal"
-args.split_dir = "./spilts/task_camelyon16/"
-args.csv_path = 'dataset_csv/camelyon16.csv'
-args.data_root_dir = "data_feat"
+args.split_dir = "task_camelyon16/"
+args.csv_path = './dataset_csv/camelyon16.csv'
+args.data_root_dir = "./data_feat"
 sub_feat_dir = 'Camelyon16_patch256_res50'
 args.max_epochs = 50
 args.reg = 1e-04
@@ -237,5 +231,4 @@ if __name__ == "__main__":
     results = main(args)
     print("finished!")
     print("end script")
-
 
