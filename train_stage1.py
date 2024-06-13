@@ -175,7 +175,7 @@ if args.task == 'task_1_tumor_vs_normal':
     args.n_classes=2
     dataset = Generic_MIL_Dataset(
                             csv_path = args.csv_path,
-                            data_dir = os.path('/kaggle/working/WSI-finetuning/data_feat/Camelyon16_patch256_ostu_res50'),
+                            data_dir = os.path.join(args.data_root_dir, sub_feat_dir),
                             shuffle = False,
                             seed = args.seed,
                             print_info = True,
