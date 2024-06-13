@@ -108,6 +108,7 @@ def train(datasets, cur, args):
     """   
         train for a single fold
     """
+    print('result',args.results_dir)
     print('\nTraining Fold {}!'.format(cur))
     writer_dir = os.path.join(args.results_dir, str(cur))
     if not os.path.isdir(writer_dir):
