@@ -1,8 +1,18 @@
 case_id,slide_id,label
-patient_127,tumor_041,1
-patient_130,tumor_044,1
-patient_132,tumor_046,1
-patient_134,tumor_048,0
-patient_135,tumor_049,0
-patient_136,tumor_050,0
+patient_137,tumor_037,1
+patient_138,tumor_038,1
+patient_139,tumor_039,1
+patient_140,tumor_040,1
+patient_141,tumor_041,1
+patient_142,tumor_042,1
+patient_143,tumor_043,1
+patient_144,tumor_044,1
+patient_145,tumor_045,0
+patient_146,tumor_046,0
+patient_147,tumor_047,0
+patient_148,tumor_048,0
+patient_149,tumor_049,0
+patient_150,tumor_050,0
+patient_151,tumor_051,0
+patient_152,tumor_052,0
 
