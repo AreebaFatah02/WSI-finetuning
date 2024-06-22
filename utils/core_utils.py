@@ -147,6 +147,7 @@ def train(datasets, cur, args):
     print('Done!')
     
     print('\nInit Model...', end=' ')
+    print('Model is : \n\n\n\n <><><><><>',args.model_type)
     model_dict = {"dropout": args.drop_out, 'n_classes': args.n_classes}
     if args.model_type == 'clam' and args.subtyping:
         model_dict.update({'subtyping': True})
