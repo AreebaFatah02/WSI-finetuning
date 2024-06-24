@@ -101,7 +101,7 @@ parser.add_argument('--weighted_sample', action='store_true', default=False, hel
 parser.add_argument('--model_size', type=str, choices=['small', 'big'], default='small', help='size of model, does not affect mil')
 parser.add_argument('--task', type=str, choices=['task_1_tumor_vs_normal',  'task_2_tumor_subtyping'])
 ### CLAM specific options
-parser.add_argument('--no_inst_cluster', action='store_true', default=False,
+parser.add_argument('--no_inst_cluster', action='store_true', default=True,
                      help='disable instance-level clustering')
 parser.add_argument('--inst_loss', type=str, choices=['svm', 'ce', None], default=None,
                      help='instance-level clustering loss function (default: None)')
