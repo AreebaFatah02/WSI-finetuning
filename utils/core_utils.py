@@ -211,7 +211,7 @@ def train(datasets, cur, args):
         early_stopping = None
     print('Done!')
     for epoch in range(args.max_epochs):
-        if args.model_type in ['clam_sb', 'clam_mb'] and not args.no_inst_cluster:
+        if args.model_type in ['clam_sb', 'clam_mb'] :
             train_loop_clam(epoch, model, train_loader, optimizer, args.n_classes, args.bag_weight, writer, loss_fn)
             stop = validate_clam(cur, epoch, model, val_loader, args.n_classes,
                 early_stopping, writer, loss_fn, args.results_dir)
